@@ -28,10 +28,10 @@ function UserProfile() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/data/users.json").then((r) => r.json()),
-      fetch("/data/audios.json").then((r) => r.json()),
-      fetch("/data/likes.json").then((r) => r.json()),
-      fetch("/data/birds.json").then((r) => r.json())
+      fetch(`${import.meta.env.BASE_URL}data/users.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/audios.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/likes.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/birds.json`).then((r) => r.json())
     ])
       .then(([usersData, audiosData, likesData, birdsData]) => {
         setUsers(usersData);
@@ -87,7 +87,7 @@ function UserProfile() {
         {/* 🧑 用户信息栏 */}
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
           <img
-            src={user.avatar || "/images/default-avatar.png"}
+           src={`${import.meta.env.BASE_URL}${user.avatar || 'images/default-avatar.png'}`}
             alt={user.name}
             className="w-28 h-28 rounded-full object-cover border-4 border-green-200 shadow-md"
           />
@@ -142,7 +142,7 @@ function UserProfile() {
                       onClick={() => navigate(`/audio/${audio.id}`)}
                     >
                       <img
-                        src={bird?.image}
+                        src={`${import.meta.env.BASE_URL}${bird?.image}`}
                         alt={bird?.name}
                         className="w-full h-40 object-cover rounded-xl mb-3"
                       />
@@ -152,7 +152,7 @@ function UserProfile() {
                       <p className="text-sm text-gray-500 mb-2">
                         {audio.fileUrl.split("/").pop()}
                       </p>
-                      <AudioPlayer fileUrl={audio.fileUrl} />
+                      <AudioPlayer fileUrl={`${import.meta.env.BASE_URL}${audio.fileUrl}`} />
                     </div>
                   );
                 })}
@@ -179,7 +179,7 @@ function UserProfile() {
                       onClick={() => navigate(`/audio/${audio.id}`)}
                     >
                       <img
-                        src={bird?.image}
+                        src={`${import.meta.env.BASE_URL}${bird?.image}`}
                         alt={bird?.name}
                         className="w-full h-40 object-cover rounded-t-2xl"
                       />
@@ -215,7 +215,7 @@ function UserProfile() {
                     onClick={() => navigate(`/users/${f.id}`)}
                   >
                     <img
-                      src={f.avatar}
+                      src={`${import.meta.env.BASE_URL}${f.avatar}`}
                       alt={f.name}
                       className="w-20 h-20 mx-auto rounded-full border border-green-200 object-cover shadow-sm mb-2"
                     />

@@ -15,9 +15,9 @@ function BirdDetail() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/data/birds.json").then((r) => r.json()),
-      fetch("/data/audios.json").then((r) => r.json()),
-      fetch("/data/users.json").then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/birds.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/audios.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/users.json`).then((r) => r.json()),
     ])
       .then(([birdsData, audiosData, usersData]) => {
         const foundBird = birdsData.find((b) => b.id === Number(id));
@@ -43,8 +43,8 @@ function BirdDetail() {
   const getUploader = (uid) => {
     const user = users.find((u) => Number(u.id) === Number(uid));
     return user
-      ? { name: user.name, avatar: user.avatar }
-      : { name: "Anonymous", avatar: "/images/default-avatar.png" };
+      ? { name: user.name, avatar: `${import.meta.env.BASE_URL}${user.avatar}` }
+      : { name: "Anonymous", avatar:  `${import.meta.env.BASE_URL}images/default-avatar.png`};
   };
 
   return (
@@ -65,7 +65,7 @@ function BirdDetail() {
 
         <div className="flex flex-col lg:flex-row items-start gap-8">
           <img
-            src={bird.image}
+            src={`${import.meta.env.BASE_URL}${bird.image}`}
             alt={bird.name}
             className="w-full lg:w-1/2 h-80 object-cover rounded-2xl shadow-md"
           />
@@ -127,7 +127,7 @@ function BirdDetail() {
                     </div>
 
                     <div className="flex items-center gap-3 mt-3 md:mt-0">
-                      <AudioPlayer fileUrl={audio.fileUrl} />
+                      <AudioPlayer fileUrl={`${import.meta.env.BASE_URL}${audio.fileUrl}`} />
                       <button
                         onClick={() => navigate(`/audio/${audio.id}`)}
                         className="text-sm px-3 py-1 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
@@ -144,8 +144,22 @@ function BirdDetail() {
 
         {/* 🗺️ 地图部分 */}
 {recordings.some((r) => r.location) && (
-  <BirdMap bird={bird} recordings={recordings} users={users} />
+  <BirdMap
+    bird={{
+      ...bird,
+      image: `${import.meta.env.BASE_URL}${bird.image}`,
+    }}
+    recordings={recordings.map((r) => ({
+      ...r,
+      fileUrl: `${import.meta.env.BASE_URL}${r.fileUrl}`,
+    }))}
+    users={users.map((u) => ({
+      ...u,
+      avatar: `${import.meta.env.BASE_URL}${u.avatar}`,
+    }))}
+  />
 )}
+
 
 
         {/* 🌍 Related Birds */}
@@ -162,7 +176,7 @@ function BirdDetail() {
                   className="cursor-pointer bg-white border border-green-100 hover:shadow-lg transition rounded-2xl overflow-hidden"
                 >
                   <img
-                    src={b.image}
+                    src={`${import.meta.env.BASE_URL}${b.image}`}
                     alt={b.name}
                     className="w-full h-48 object-cover"
                   />

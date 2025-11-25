@@ -9,7 +9,7 @@ export default function Navbar() {
     const id = localStorage.getItem("currentUserId");
     if (!id) return;
 
-    fetch("/data/users.json")
+    fetch(`${import.meta.env.BASE_URL}data/users.json`)
       .then((res) => res.json())
       .then((users) => setCurrentUser(users.find((u) => u.id === Number(id))));
   }, []);

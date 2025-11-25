@@ -7,9 +7,9 @@ function Leaderboard() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/data/likes.json").then((r) => r.json()),
-      fetch("/data/birds.json").then((r) => r.json()),
-      fetch("/data/audios.json").then((r) => r.json())
+      fetch(`${import.meta.env.BASE_URL}data/likes.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/birds.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/audios.json`).then((r) => r.json())
     ])
       .then(([likesData, birdsData, audiosData]) => {
         setLikes(likesData);

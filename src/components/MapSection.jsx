@@ -13,8 +13,8 @@ function MapSection({ onMarkerClick }) {
 
   useEffect(() => {
     Promise.all([
-      fetch("/data/birds.json").then((r) => r.json()),
-      fetch("/data/locations.json").then((r) => r.json())
+      fetch(`${import.meta.env.BASE_URL}data/birds.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/locations.json`).then((r) => r.json())
     ])
       .then(([birdsData, locationsData]) => {
         setBirds(birdsData);
@@ -80,7 +80,7 @@ function MapSection({ onMarkerClick }) {
       if (!bird) return;
 
       const icon = L.icon({
-        iconUrl: bird.image,
+        iconUrl:  `${import.meta.env.BASE_URL}${bird.image}`,
         iconSize: [36, 36],
         className: "rounded-full border border-green-300"
       });
@@ -90,7 +90,7 @@ function MapSection({ onMarkerClick }) {
 // ✅ 定义 Popup 内容
 const popupContent = `
   <div style="text-align:center;cursor:pointer;">
-    <img src="${bird.image}" width="80" height="80"
+    <img src="${import.meta.env.BASE_URL}${bird.image}" width="80" height="80"
          style="border-radius:8px;margin-bottom:4px;" />
     <h4 style="margin:0;font-size:1rem;color:#14532d;">${bird.name}</h4>
     <p style="margin:0;font-size:0.8rem;color:#555;">Habitat: ${bird.habitat}</p>

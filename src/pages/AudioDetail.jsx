@@ -26,10 +26,10 @@ function AudioDetail() {
   // 加载数据
   useEffect(() => {
     Promise.all([
-      fetch("/data/audios.json").then((r) => r.json()),
-      fetch("/data/birds.json").then((r) => r.json()),
-      fetch("/data/users.json").then((r) => r.json()),
-      fetch("/data/likes.json").then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/audios.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/birds.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/users.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/likes.json`).then((r) => r.json()),
     ])
       .then(([audioData, birdsData, usersData, likesData]) => {
         const current = audioData.find((a) => String(a.id) === id);
@@ -127,18 +127,18 @@ function AudioDetail() {
       {/* 🎧 播放器与分析区 */}
       <section className="max-w-6xl mx-auto bg-white rounded-2xl shadow-md p-8 mb-10">
   <h2 className="text-2xl font-semibold text-green-800 mb-4">🎧 Audio Player</h2>
-  <AudioWavePlayer fileUrl={audio.fileUrl} />
+  <AudioWavePlayer fileUrl={`${import.meta.env.BASE_URL}${audio.fileUrl}`}/>
   <p className="text-gray-600 mt-3">
     File: <span className="font-mono">{audio.fileUrl.split("/").pop()}</span>
   </p>
 
   {/* 🎵 实时频谱 + 能量图 */}
-  <AudioAnalyzer fileUrl={audio.fileUrl} />
+  <AudioAnalyzer fileUrl={`${import.meta.env.BASE_URL}${audio.fileUrl}`} />
 </section>
       {/* 🧍 上传者信息 */}
       <section className="max-w-6xl mx-auto bg-green-50 border border-green-200 rounded-2xl p-6 mb-10 flex items-center gap-4">
         <img
-          src={uploader.avatar}
+          src={`${import.meta.env.BASE_URL}${uploader.avatar}`}
           alt={uploader.name}
           className="w-16 h-16 rounded-full border border-green-300 object-cover"
         />
@@ -151,7 +151,7 @@ function AudioDetail() {
       {/* 🪶 鸟类关联卡 */}
       <section className="max-w-6xl mx-auto bg-white rounded-2xl shadow-md p-6 mb-10 flex flex-col sm:flex-row items-center gap-6">
         <img
-          src={bird.image}
+          src={`${import.meta.env.BASE_URL}${bird.image}`}
           alt={bird.name}
           className="w-48 h-48 rounded-xl object-cover shadow-sm"
         />

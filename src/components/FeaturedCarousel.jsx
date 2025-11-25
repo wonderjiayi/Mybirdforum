@@ -12,11 +12,11 @@ function FeaturedCarousel() {
 
   // 加载鸟类和音频数据
   useEffect(() => {
-    fetch("/data/birds.json")
+    fetch(`${import.meta.env.BASE_URL}data/birds.json`)
       .then((res) => res.json())
       .then((data) => setBirds(data.slice(0, 5)));
 
-    fetch("/data/audios.json")
+    fetch(`${import.meta.env.BASE_URL}data/audios.json`)
       .then((res) => res.json())
       .then((data) => setAudios(data));
   }, []);

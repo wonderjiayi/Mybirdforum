@@ -7,7 +7,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("/data/users.json")
+    fetch(`${import.meta.env.BASE_URL}data/users.json`)
       .then((res) => res.json())
       .then(setUsers);
   }, []);

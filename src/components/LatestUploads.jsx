@@ -11,9 +11,9 @@ function LatestUploads() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/data/audios.json").then((r) => r.json()),
-      fetch("/data/birds.json").then((r) => r.json()),
-      fetch("/data/users.json").then((r) => r.json())
+      fetch(`${import.meta.env.BASE_URL}data/audios.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/birds.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/users.json`).then((r) => r.json())
     ])
       .then(([audiosData, birdsData, usersData]) => {
         const sorted = audiosData

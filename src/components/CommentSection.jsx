@@ -17,8 +17,8 @@ function CommentSection({ audioId, onCountChange }) {
   // 🔹 加载评论与用户信息
   useEffect(() => {
     Promise.all([
-      fetch("/data/comments.json").then((r) => r.json()),
-      fetch("/data/users.json").then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/comments.json`).then((r) => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/users.json`).then((r) => r.json()),
     ])
       .then(([commentData, userData]) => {
         const filtered = commentData.filter((c) => c.audioId === Number(audioId));

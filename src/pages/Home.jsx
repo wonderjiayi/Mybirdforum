@@ -91,7 +91,7 @@ function Home() {
             }`}
           >
             <img
-              src={bird.image}
+              src={`${import.meta.env.BASE_URL}${bird.image}`}
               alt={bird.name}
               className="w-full h-full object-cover"
             />
@@ -103,7 +103,7 @@ function Home() {
               <p className="mb-4 italic text-lg opacity-90">
                 {bird.habitat || "No habitat info"}
               </p>
-              <AudioPlayer fileUrl={bird.sampleAudio || ""} />
+              <AudioPlayer fileUrl={`${import.meta.env.BASE_URL}${bird.sampleAudio || ""}`} />
               <button
                 onClick={() => navigate(`/birds/${bird.id}`)}
                 className="mt-5 bg-green-600 px-6 py-2 rounded-full hover:bg-green-700 transition"
@@ -148,7 +148,7 @@ function Home() {
                     {idx + 1}.
                   </span>
                   <img
-                    src={bird.image}
+                    src={`${import.meta.env.BASE_URL}${bird.image}`}
                     alt={bird.name}
                     className="w-10 h-10 object-cover rounded-full"
                   />
@@ -176,7 +176,7 @@ function Home() {
                   className="flex items-center gap-4 cursor-pointer hover:bg-green-50 p-2 rounded-xl transition"
                 >
                   <img
-                    src={audio.uploaderData.avatar}
+                    src={`${import.meta.env.BASE_URL}${audio.uploaderData.avatar}`}
                     alt={audio.uploaderData.name}
                     className="w-10 h-10 rounded-full object-cover"
                   />
@@ -205,7 +205,7 @@ function Home() {
                 className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition cursor-pointer overflow-hidden"
               >
                 <img
-                  src={bird.image}
+                  src={`${import.meta.env.BASE_URL}${bird.image}`}
                   alt={bird.name}
                   className="w-full h-48 object-cover"
                 />

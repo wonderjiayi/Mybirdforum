@@ -42,7 +42,7 @@ function RecordingMap({ bird, audio }) {
     marker.openPopup();
 
     // 可选：加载该鸟类其他录音热力图
-    fetch("/data/audios.json")
+    fetch(`${import.meta.env.BASE_URL}data/audios.json`)
       .then((r) => r.json())
       .then((data) => {
         const points = data
