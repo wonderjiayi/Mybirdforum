@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Blue Jay",
+    "latinName": "Cyanocitta cristata",
+    "habitat": "Forests, parks, and suburban areas",
+    "region": "North America",
+    "description": "Known for its intelligence and vibrant blue plumage.",
+    "image": "/images/birds/bluejay.jpg",
+    "sampleAudio": "/audios/bluejay.mp3"
+  },
+  {
+    "id": 2,
+    "name": "Northern Cardinal",
+    "latinName": "Cardinalis cardinalis",
+    "habitat": "Woodlands, gardens, shrublands",
+    "region": "North America",
+    "description": "A bright red songbird that sings rich, melodious whistles.",
+    "image": "/images/birds/cardinal.jpg",
+    "sampleAudio": "/audios/cardinal1.mp3"
+  },
+  {
+    "id": 3,
+    "name": "Black-capped Chickadee",
+    "latinName": "Poecile atricapillus",
+    "habitat": "Mixed forests and backyard feeders",
+    "region": "Northern US and Canada",
+    "description": "Famous for its cheerful 'chick-a-dee-dee-dee' call.",
+    "image": "/images/birds/chickadee.jpg",
+    "sampleAudio": "/audios/chickadee1.mp3"
+  },
+  {
+    "id": 4,
+    "name": "American Crow",
+    "latinName": "Corvus brachyrhynchos",
+    "habitat": "Cities, forests, fields",
+    "region": "North America",
+    "description": "Highly intelligent birds often seen in urban and rural settings.",
+    "image": "/images/birds/crow.jpg",
+    "sampleAudio": "/audios/crow.mp3"
+  },
+  {
+    "id": 5,
+    "name": "American Goldfinch",
+    "latinName": "Spinus tristis",
+    "habitat": "Fields, meadows, and gardens",
+    "region": "United States and Canada",
+    "description": "A bright yellow finch known for its joyful, twittering flight calls.",
+    "image": "/images/birds/goldfinch.jpg",
+    "sampleAudio": "/audios/goldfinch.mp3"
+  },
+  {
+    "id": 6,
+    "name": "Hummingbird",
+    "latinName": "Trochilidae",
+    "habitat": "Gardens, forests, and flower-rich areas",
+    "region": "Americas",
+    "description": "Tiny birds capable of hovering with rapid wing beats.",
+    "image": "/images/birds/hummingbird.jpg",
+    "sampleAudio": "/audios/hummingbird.mp3"
+  },
+  {
+    "id": 7,
+    "name": "American Robin",
+    "latinName": "Turdus migratorius",
+    "habitat": "Lawns, forests, parks",
+    "region": "North America",
+    "description": "Recognizable by its red-orange breast and melodic song.",
+    "image": "/images/birds/robin.jpg",
+    "sampleAudio": "/audios/robin1.mp3"
+  },
+  {
+    "id": 8,
+    "name": "House Sparrow",
+    "latinName": "Passer domesticus",
+    "habitat": "Cities and farms",
+    "region": "Worldwide",
+    "description": "One of the most familiar birds found near human habitation.",
+    "image": "/images/birds/sparrow.jpg",
+    "sampleAudio": "/audios/sparrow.mp3"
+  },
+  {
+    "id": 9,
+    "name": "Pileated Woodpecker",
+    "latinName": "Dryocopus pileatus",
+    "habitat": "Forests with large trees",
+    "region": "North America",
+    "description": "Large woodpecker known for loud drumming and vivid red crest.",
+    "image": "/images/birds/woodpecker.jpg",
+    "sampleAudio": "/audios/woodpecker.mp3"
+  }
+]
