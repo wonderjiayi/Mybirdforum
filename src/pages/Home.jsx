@@ -17,10 +17,10 @@ function Home() {
   // 载入所有 JSON 数据
   useEffect(() => {
     Promise.all([
-      fetch("/data/birds.json").then((res) => res.json()),
-      fetch("/data/audios.json").then((res) => res.json()),
-      fetch("/data/likes.json").then((res) => res.json()),
-      fetch("/data/users.json").then((res) => res.json()),
+      fetch(`${import.meta.env.BASE_URL}data/birds.json`).then((res) => res.json()),
+      fetch(`${import.meta.env.BASE_URL}data/audios.json`).then((res) => res.json()),
+      fetch(`${import.meta.env.BASE_URL}data/likes.json`).then((res) => res.json()),
+      fetch(`${import.meta.env.BASE_URL}data/users.json`).then((res) => res.json()),
     ])
       .then(([birdsData, audiosData, likesData, usersData]) => {
         setBirds(birdsData);
