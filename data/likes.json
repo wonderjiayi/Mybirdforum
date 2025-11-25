@@ -1,0 +1,8 @@
+[
+  { "userId": 1, "audioId": 101 },
+  { "userId": 1, "audioId": 105 },
+  { "userId": 2, "audioId": 103 },
+  { "userId": 3, "audioId": 102 },
+  { "userId": 3, "audioId": 104 },
+  { "userId": 4, "audioId": 101 }
+]

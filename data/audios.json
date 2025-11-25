@@ -1,0 +1,47 @@
+[
+  {
+    "id": 101,
+    "birdId": 1,
+    "uploader": "2",
+    "fileUrl": "/audios/cardinal1.mp3",
+    "likeCount": 23,
+    "uploadedAt": "2025-11-12T10:00:00Z",
+    "location": { "lat": 42.36, "lng": -71.06, "city": "Boston, MA" }
+  },
+  {
+    "id": 102,
+    "birdId": 2,
+    "uploader": "3",
+    "fileUrl": "/audios/robin1.mp3",
+    "likeCount": 18,
+    "uploadedAt": "2025-11-13T09:20:00Z",
+    "location": { "lat": 40.78, "lng": -73.97, "city": "New York, NY" }
+  },
+  {
+    "id": 103,
+    "birdId": 3,
+    "uploader": "1",
+    "fileUrl": "/audios/crow.mp3",
+    "likeCount": 45,
+    "uploadedAt": "2025-11-14T11:45:00Z",
+    "location": { "lat": 37.77, "lng": -122.42, "city": "San Francisco, CA" }
+  },
+  {
+    "id": 104,
+    "birdId": 4,
+    "uploader": "2",
+    "fileUrl": "/audios/chickadee1.mp3",
+    "likeCount": 11,
+    "uploadedAt": "2025-11-15T08:15:00Z",
+    "location": { "lat": 41.88, "lng": -87.63, "city": "Chicago, IL" }
+  },
+  {
+    "id": 105,
+    "birdId": 5,
+    "uploader": "4",
+    "fileUrl": "/audios/oriole1.mp3",
+    "likeCount": 30,
+    "uploadedAt": "2025-11-16T14:30:00Z",
+    "location": { "lat": 34.05, "lng": -118.25, "city": "Los Angeles, CA" }
+  }
+]

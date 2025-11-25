@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Jovie",
+    "avatar": "/images/avatar1.png",
+    "followingIds": [2, 3]
+  },
+  {
+    "id": 2,
+    "name": "Alex",
+    "avatar": "/images/avatar2.png",
+    "followingIds": [1]
+  },
+  {
+    "id": 3,
+    "name": "Mina",
+    "avatar": "/images/avatar3.png",
+    "followingIds": [1, 2]
+  },
+  {
+    "id": 4,
+    "name": "Tom",
+    "avatar": "/images/avatar4.png",
+    "followingIds": []
+  }
+]

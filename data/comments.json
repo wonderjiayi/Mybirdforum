@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "audioId": 101,
+    "userId": 1,
+    "content": "This Blue Jay song is so crisp and cheerful! 💙",
+    "parentId": null,
+    "createdAt": "2025-11-16T08:30:00Z"
+  },
+  {
+    "id": 2,
+    "audioId": 101,
+    "userId": 2,
+    "content": "Agree! It really feels like a spring morning in the woods.",
+    "parentId": 1,
+    "createdAt": "2025-11-16T08:45:00Z"
+  },
+  {
+    "id": 3,
+    "audioId": 101,
+    "userId": 3,
+    "content": "I tried recording Blue Jays too, but mine were too noisy 😅",
+    "parentId": 1,
+    "createdAt": "2025-11-16T09:00:00Z"
+  },
+  {
+    "id": 4,
+    "audioId": 101,
+    "userId": 4,
+    "content": "Nice stereo balance! Which mic did you use?",
+    "parentId": null,
+    "createdAt": "2025-11-16T09:40:00Z"
+  },
+  {
+    "id": 5,
+    "audioId": 101,
+    "userId": 2,
+    "content": "Probably a directional one, sound is super clean.",
+    "parentId": 4,
+    "createdAt": "2025-11-16T09:50:00Z"
+  },
+
+  {
+    "id": 6,
+    "audioId": 102,
+    "userId": 3,
+    "content": "American Robin calls always make me nostalgic. ☀️",
+    "parentId": null,
+    "createdAt": "2025-11-15T10:00:00Z"
+  },
+  {
+    "id": 7,
+    "audioId": 102,
+    "userId": 1,
+    "content": "Totally! I used to hear them every dawn back home.",
+    "parentId": 6,
+    "createdAt": "2025-11-15T10:10:00Z"
+  },
+  {
+    "id": 8,
+    "audioId": 102,
+    "userId": 2,
+    "content": "Sound quality is slightly windy but still clear overall.",
+    "parentId": null,
+    "createdAt": "2025-11-15T10:25:00Z"
+  },
+
+  {
+    "id": 9,
+    "audioId": 103,
+    "userId": 4,
+    "content": "Crows are so smart! I love how they imitate other birds.",
+    "parentId": null,
+    "createdAt": "2025-11-14T11:15:00Z"
+  },
+  {
+    "id": 10,
+    "audioId": 103,
+    "userId": 1,
+    "content": "Yes! Sometimes they even mimic human whistles.",
+    "parentId": 9,
+    "createdAt": "2025-11-14T11:25:00Z"
+  },
+  {
+    "id": 11,
+    "audioId": 103,
+    "userId": 2,
+    "content": "Fun fact: crows can recognize individual faces.",
+    "parentId": 9,
+    "createdAt": "2025-11-14T11:40:00Z"
+  },
+
+  {
+    "id": 12,
+    "audioId": 104,
+    "userId": 3,
+    "content": "Chickadees are tiny but have strong voices! 🐦",
+    "parentId": null,
+    "createdAt": "2025-11-15T08:15:00Z"
+  },
+  {
+    "id": 13,
+    "audioId": 104,
+    "userId": 1,
+    "content": "Haha, yes! Their 'dee-dee' call is so distinctive.",
+    "parentId": 12,
+    "createdAt": "2025-11-15T08:30:00Z"
+  },
+  {
+    "id": 14,
+    "audioId": 104,
+    "userId": 4,
+    "content": "I love recording them on cold mornings, super lively.",
+    "parentId": null,
+    "createdAt": "2025-11-15T09:00:00Z"
+  },
+
+  {
+    "id": 15,
+    "audioId": 105,
+    "userId": 2,
+    "content": "Wow, this Oriole song sounds like a flute! 🎶",
+    "parentId": null,
+    "createdAt": "2025-11-16T14:30:00Z"
+  },
+  {
+    "id": 16,
+    "audioId": 105,
+    "userId": 1,
+    "content": "Oriole recordings are my favorite — so melodic.",
+    "parentId": 15,
+    "createdAt": "2025-11-16T14:40:00Z"
+  },
+  {
+    "id": 17,
+    "audioId": 105,
+    "userId": 3,
+    "content": "It even has little pauses, feels like it's talking!",
+    "parentId": 15,
+    "createdAt": "2025-11-16T14:55:00Z"
+  },
+  {
+    "id": 18,
+    "audioId": 105,
+    "userId": 4,
+    "content": "This is my new favorite upload ❤️",
+    "parentId": null,
+    "createdAt": "2025-11-16T15:05:00Z"
+  }
+]

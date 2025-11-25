@@ -1,0 +1,11 @@
+[
+  { "birdId": 1, "lat": 42.3601, "lng": -71.0589, "density": 0.8 },
+  { "birdId": 2, "lat": 40.7128, "lng": -74.0060, "density": 0.6 },
+  { "birdId": 3, "lat": 34.0522, "lng": -118.2437, "density": 0.9 },
+  { "birdId": 4, "lat": 47.6062, "lng": -122.3321, "density": 0.5 },
+  { "birdId": 5, "lat": 37.7749, "lng": -122.4194, "density": 0.7 },
+  { "birdId": 6, "lat": 25.7617, "lng": -80.1918, "density": 0.4 },
+  { "birdId": 7, "lat": 39.7392, "lng": -104.9903, "density": 0.65 },
+  { "birdId": 8, "lat": 32.7767, "lng": -96.7970, "density": 0.55 },
+  { "birdId": 9, "lat": 45.5122, "lng": -122.6587, "density": 0.85 }
+]
